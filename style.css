@@ -1,0 +1,35 @@
+#darkSoulsOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.5s ease-in-out;
+}
+
+#darkSoulsOverlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.darkSoulsImage {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 1.5s ease-in-out;
+}
+
+#darkSoulsOverlay.show .darkSoulsImage {
+  opacity: 1;
+  transform: scale(1);
+}
+  

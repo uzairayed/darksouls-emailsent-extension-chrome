@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Gmail Dark Souls Email Sent",
+  "version": "1.0",
+  "description": "Replaces Gmail's sent confirmation with a Dark Souls-style overlay.",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ]
+} 
